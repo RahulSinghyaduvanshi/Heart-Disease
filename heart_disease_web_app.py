@@ -9,7 +9,7 @@ import numpy as np
 import pickle
 import streamlit as st
 #loading the saved model
-loaded_model=pickle.load(open('C:/Users/Rahul Thakur/Desktop/Mini Project/trained_model.sav', 'rb'))
+loaded_model=pickle.load(open('C:/Users/Rahul Thakur/Desktop/Mini Project/trained_model_svm.sav', 'rb'))
 
 def heart_disease_prediction(input_data):
     
@@ -39,18 +39,18 @@ def main():
     #getting the input from the users
     
     age=st.text_input('Enter Your Age')
-    sex=st.text_input('Enter Sex (0,1)')
-    cp=st.text_input('Enter Chest pain type(0-3)')
-    trestbps=st.text_input('Enter Resting blood pressure or bp(90-200)')
-    chol=st.text_input('Enter Your cholestrol(100-400)')
-    fbs=st.text_input('Enter Your fasting blood pressure(0-1)')
-    restecg=st.text_input('Enter Your electrocardiographic result(0-1)')
-    thalach=st.text_input('Enter Your Maximum heart rate(90-200)')
-    exang=st.text_input('Enter Your exercise induced Angina(0-1)')
-    oldpeak=st.text_input('Enter Your ST depression induced by exercise relative to rest(0-5.0)')
-    slope=st.text_input('Enter the slope of the peak exercise ST segment(0-2)')
-    ca=st.text_input('Enter  number of major vessels (0-3) colored by fluoroscopy(0-4)')
-    thal=st.text_input('Enter  [normal; fixed defect; reversible defect(1-3)]')
+    sex=st.text_input('Enter Sex: 0 for male , 1 for female')
+    cp=st.text_input('Enter Chest pain type 0-3')
+    trestbps=st.text_input('Enter Resting blood pressure or bp between 90-200')
+    chol=st.text_input('Enter Your cholestrol between 100-400')
+    fbs=st.text_input('Enter Your fasting blood pressure from 0 to 1')
+    restecg=st.text_input('Enter Your electrocardiographic result from 0 to 1')
+    thalach=st.text_input('Enter Your Maximum heart rate between 90-200')
+    exang=st.text_input('Enter Your exercise induced Angina from 0-1')
+    oldpeak=st.text_input('Enter Your ST depression induced by exercise relative to rest from 0-5.0')
+    slope=st.text_input('Enter the slope of the peak exercise ST segment from 0-2')
+    ca=st.text_input('Enter  number of major vessels (0-3) colored by fluoroscopy from 0-4')
+    thal=st.text_input('Enter  [normal; fixed defect; reversible defect from 1-3]')
     
     #code for prediction
     diagnosis=''
